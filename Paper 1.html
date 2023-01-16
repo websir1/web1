@@ -10,7 +10,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>MC</b> School</a>
+    <a href="Index.html" class="w3-bar-item w3-button"><b>Home</b> School</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="Paper 1.html" class="w3-bar-item w3-button">Paper 1</a>
@@ -28,67 +28,64 @@
   <!-- About Section -->
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="paper 1.jpeg" alt="John" style="width:160%">
+      <!--<img src="Paper 1.jpeg" alt="John" style="width:160%">-->
+<pre>
+I Create a Data Frame quarterly sales where each row contains the item category, item name, <br> and expenditure. Group the rows by the category and print the total expenditure per category.
+Consider the following table and write answers for given questions below:
+RollNo	Name	Class	DOB	Gender	City	Marks
+1	Naman	XII	1995-05-09	M	Anand	453
+2	Nandini	X	1997-04-08	F	Baroda	551
+3	Nakshatra	X	1997-03-02	F	Baroda	553
+4	Shailesh	XI	1995-04-07	M	Surat	458
+5	Trisha	XII	1996-04-01	F	Anand	430
+6	Manisha	XII	1995-02-05	F	Anand	530
+7	Hetvee	XII	1995-08-17	F	Junagadh	555
+8	Neel	X	1997-10-19	M	Godhara	559
+9	Mayur	XII	1996-12-04	M	Surat	570
+10	Dolin	XII	1994-11-02	M	Anand	585
+Create above table in MySQL.
+Insert records.
+To display the detail of class XII students in descending order of their marks.
+Display all the details of students in ascending order of name.
+Find the maximum marks of the student for each class.
+Count the students class wise is display only those number who is more than 2.
+Display unique cities from the table.
+</pre>
     </div>
 
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Ans Paper 1</h3>
-<p><b>Q1<b></p>
+<p><h2><b>Q1<b><h2></p>
 <pre>
-&lt;html&gt;
-&lt;head&gt;
-&lt;title&gt;Experiment 1&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;&lt;h1&gt;
-&lt;a herf ="c:/audio.mp3"&gt;click here to start&lt;/a&gt;
-&lt;audio controls&gt;
-&lt;sourse scr="c:/audio.mp3" type="audio/mpeg" autoplay="ture"&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<h3>1 Create table:
+create table students
+(rollno int(4) primary key,
+name varchar(20) not null,
+class varchar(4),
+dob date,
+gender char(1),
+city varchar(20),
+marks float);<h3>
 </pre>
-<p><b>Q2<b></p>
+<b>Q2<b>
 <pre>
-	&lt;html&gt; 
-	&lt;body&gt;&lt;h1&gt; 
-	&lt;script&gt; 
-	str = prompt ("Enter a String") 
-	cupper = 0, clower = 0, cspl = 0, cdig = 0 
-	for(i = 0; i &lt; str.length; i++) 
-	{ 
-	ch = str.charAt(i) 
-	if(ch &gt;='A' && ch &lt;= 'Z') 
-	cupper++ 
-	else if(ch &gt;= 'a' && ch &lt;= 'z') 
-	clower++ 
-	else if(ch &gt;= 0 && ch &lt;= 9) 
-	cdig++ 
-	else 
-	cspl++ 
-	} 
-	document.write("Total Upper Case = " + cupper + "&lt;br&gt;" + 
-	"Total Lower Case = " + clower + "&lt;br&gt;" + 
-	"Total Digits = " + cdig + "&lt;br&gt;" + 
-	"Total Special Characters = " + cspl) 
-	&lt;/script&gt; 
-	
-	&lt;/body&gt;
-
+<h3>2 Insert records:
+insert into students values 
+(1, 'Naman', 'XII','1995/05/09','M','Anand',453)
+Insert all records simimlarly.
+3 display the detail of class XII students in descending order of their marks
+select * from students order by marks desc;
+4 Display all the details of students in ascending order of name
+select * from students order by name asc
+5 Find the maximum marks of the student for each class
+select class,max(marks) from students group by class
+6 Count the students class wise is display only those number who is more than 2
+select class,count(*) from students group by class having count(*)>2;
+7 Display unique cities from the table
+select distinct city from students;<h3>
 </pre>
-<p><b>Q3<b></p>
+<p><b><b></p>
 <pre>
-Steps
-
-Insert a blank recordable DVD  into your dvd burner
-
-Open a project video. mpeg in windows Movie Maker 2.6
-
-Click file, then clich publish movie
-
-Chish DVD, the click next 
-
-• Windows ove maker options 
-
-Complete the steps to create a dvd sering windows DVD maker
 
 </pre>
   </div>
