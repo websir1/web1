@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="index.html" class="w3-bar-item w3-button"><b>MC</b> School</a>
+    <a href="index.html" class="w3-bar-item w3-button"><b>Home</b> School</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="Paper 1.html" class="w3-bar-item w3-button">Paper 1</a>
@@ -28,45 +29,63 @@
   <!-- About Section -->
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="paper 2.jpeg" alt="John" style="width:160%">
+      <!--<img src="Paper 1.jpeg" alt="John" style="width:160%">-->
+<pre>
+I. Create a data frame for examination result and display row labels, column labels data <br> types of each column and the dimensions.
+
+Q – 2 Create below table “staff” and insert all records.
+
+ 	
+Sid	sname	designation	salary	dojoin	
+1001	Sagar	PGT	87000	2010-11-02	Residential Section
+1002	Ankit	Clerk	24000	2010-04-01	Office
+1003	Dhwani	Clerk	22000	2009-01-05	Office
+1004	Jenil	PRT	34000	2009-07-25	Primary
+1005	Roshni	PGT	73000	2008-07-17	Senior
+1006	Mital	TGT	41000	2008-04-08	Middle
+1007	Gagan	Lab Assistant	24000	2009-11-23	Office
+
+</pre>
     </div>
 
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Ans Paper 2</h3>
-<p><b>Q1<b></p>
+<p><h2><b>Q1<b><h2></p>
 <pre>
-&lt;html&gt;
-&lt;body&gt;
-&lt;form name ="frm"&gt;
-Number of Vowels: &lt;input type = "text" name = "t1" value = &gt;
-&lt;/form&gt;
-&lt;script&gt;
-str = prompt("Enter a String");
-str = str.toUpperCase();
-count = 0;
-
-for(i = 0; i &lt; str.length ; i++)
-{
-	ch = str.charAt(i);
-	if(ch == "A"|| ch =="E"||ch =="I"||ch =="O"||ch == "U")
-		count++;
-}
-document.frm.t1.value= count;
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
+<h3>Answer the following sql queries:
+i. Display the difference of maximum and minimum salary of each section.
+select max(salary)-min(salary) from staff group by section;
+ii. Display the staff name, designation and date of joining who joins in the<br> month of July and April.
+select sname,designation,dojoin from staff where monthname(dojoin) in <br>('April','July');
+iii. Display the records of staff in their descending order of salary.
+select * from staff order by salary desc;
+iv. Show first 3 character of staff name.
+select left(sname,3) from staff;
+v. Display the records of staff who is working since last 12 years
+select * from staff where year(now())-year(dojoin)=12;
+vi. Display power of length of staff name
+select power(length(sname),2) from staff;
+<h3>
 </pre>
-<p><b>Q2<b></p>
+<!--<b>Q2<b>
 <pre>
-Combining Clips
-Steps
-In the control pane or on the storyboard hold down the ctrl- key & then click the contigious clips namely Clip 1 , Clip  2, <br>clip 3 which need  to be combined
-Click Clip & then click Combine the name & property.
-</pre>
-<p><b>Q3<b></p>
+<h3>2 Insert records:
+insert into students values 
+(1, 'Naman', 'XII','1995/05/09','M','Anand',453)
+Insert all records simimlarly.
+3 display the detail of class XII students in descending order of their marks
+select * from students order by marks desc;
+4 Display all the details of students in ascending order of name
+select * from students order by name asc
+5 Find the maximum marks of the student for each class
+select class,max(marks) from students group by class
+6 Count the students class wise is display only those number who is more than 2
+select class,count(*) from students group by class having count(*)>2;
+7 Display unique cities from the table
+select distinct city from students;<h3>
+</pre>-->
+<p><b><b></p>
 <pre>
-
 
 </pre>
   </div>
