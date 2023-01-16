@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="home.html" class="w3-bar-item w3-button"><b>MC</b> School</a>
+    <a href="index.html" class="w3-bar-item w3-button"><b>Home</b> School</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="Paper 1.html" class="w3-bar-item w3-button">Paper 1</a>
@@ -28,48 +29,61 @@
   <!-- About Section -->
   <div class="w3-row-padding w3-grayscale">
     <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="paper 3.jpeg" alt="John" style="width:160%">
+      <!--<img src="Paper 1.jpeg" alt="John" style="width:160%">-->
+<pre>
+I. Given the school result data, analyses the performance of the students on different parameters,<br> e.g subject wise or class wise.
+Q – 2 Consider the table “Charity” and write SQL queries for the tasks that follow:
+
+Table – Charity
+
+item_id	Itemname	Price	Qty	Pdate
+1	Shoes	   7500	   5	2022/11/30
+2	Socks	475	3	2022/08/25
+3	Jeans	3500	5	2022/10/19
+4	T-Shirts	1400	4	2022/11/30
+</pre>
     </div>
+
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Ans Paper 3</h3>
-<p><b>Q1<b></p>
+<p><h2><b>Q1<b><h2></p>
 <pre>
-&lt;html&gt;
-&lt;body&gt;
-&lt;form name = "frm"&gt;
-Enter Text &lt;input type="text" name = "t1"&gt;&lt;p&gt;
-Upper Case &lt;input type="radio" name="r1" value="uc"&gt; 
-Lower Case &lt;input type="radio" name="r1" value="lc"&gt;
-&lt;input type="button" value="Convert Text" OnClick= "f1()"&gt;
-&lt;/form&gt; 
-&lt;script&gt;
-function f1()
-{
-str = document.frm.t1.value
-if(document.frm.r1.value == "uc") 
-str = str.toUpperCase()
-else
-str = str.toLowerCase()
-alert(str)
-} 
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<h3>i) Display the name of week day when socks purchased.
+select dayname(pdate) from charity;
+ii) Display remainder after dividing price by qty
+select mod(price,qty) from charity;
+iii) Display the discount amount by 10% in two decimal places.
+select round(price*0.10,2) from charity;
+iv) Display the records of items purchased in the month 11.
+select * from charity where month(pdate)=11
+v) Display maximum qty purchased from the table.
+select max(qty) from charity;
+vi) Display itemname, price and qty in the descending order of price
+select itemname, price, qty from charity order by price desc;
+vii) Display item_id, itemname and position of s in each itemname.
+select item_id,itemname, instr(itemname,'s') from charity;
+
+<h3>
 </pre>
-<p><b>Q2<b></p>
+<!--<b>Q2<b>
 <pre>
-
-</pre>
-<p><b>Q3<b></p>
+<h3>2 Insert records:
+insert into students values 
+(1, 'Naman', 'XII','1995/05/09','M','Anand',453)
+Insert all records simimlarly.
+3 display the detail of class XII students in descending order of their marks
+select * from students order by marks desc;
+4 Display all the details of students in ascending order of name
+select * from students order by name asc
+5 Find the maximum marks of the student for each class
+select class,max(marks) from students group by class
+6 Count the students class wise is display only those number who is more than 2
+select class,count(*) from students group by class having count(*)>2;
+7 Display unique cities from the table
+select distinct city from students;<h3>
+</pre>-->
+<p><b><b></p>
 <pre>
-<b>Steps<b>
-Steps for Embedding Flash Files 
-
-Step 1: Upload the SWF file(s) to an external Web host. We need find a Web host (e.g. FTP server) and upload our SWF on it. Generally,<br> an account and password are required.
-
-Step 2: Once we have successfully uploaded the SWF files to an external Website add the following code to any of the sections in the<br> Web page, Blog, MySpace or even a post
- 
-Step3: Replace the SWF file link http://www.wondershare.com/pro/flash-gallery- factory-deluxe.html with your own path and file name.<br> Save the changes.
 
 </pre>
   </div>
